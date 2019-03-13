@@ -12,7 +12,22 @@ class Controller
 
     protected $_params = array();
 
-    public function render($view, $attributes = null){
-        View::getView(isset($this->layout) ? $this->layout : null)->render($this->getClassFromPath(), $view, $attributes);
+    public function __construct($params = null)
+    {
+        $this->_params = $params;
+        //print_r($this->_params);
+    }
+
+    public function render($viewName, $attributes = null){
+        (new View())->getView(isset($this->layout) ? $this->layout : null)->render($this->getClassFromPath(), $viewName, $attributes);
+    }
+
+
+    public function getClassFromPath(){
+        $arr = explode('/', __DIR__);
+
+        array_splice($arr, 4);
+
+        return  implode('/', $arr) . '/app/view/';
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+define('DEFAULT_LAYOUT', 'layout');
+
 return $config = [
 
     'site_name'     => 'ProPUBG',

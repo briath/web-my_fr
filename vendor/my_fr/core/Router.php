@@ -4,7 +4,6 @@ namespace my_fr\core;
 
 class Router
 {
-
     private $_uri = array();
     private $_method = array();
 
@@ -26,18 +25,17 @@ class Router
         //print_r($this->_uri);
         //print_r($this->_method);
 
-        $url = explode('/', $_GET['uri']);
-
-        $uriGetParam = isset($_GET['uri']) ? '/' . $url[0] : '/';
+        $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'], '/')) : [];
+        print_r($url);
+        $uriGetParam = (isset($url[0]) && $url[0] != '') ? '/' . $url[0] : '/';
         array_shift($url);
         foreach ($this->_uri as $key => $value) {
             if (preg_match("#^$value$#", $uriGetParam)) {
                 $controller_name = $this->_method[$key][0];
                 $action_name = $this->_method[$key][1];
                 $queryParams = $url;
-
-                $con = new $controller_name($queryParams);
-                $con->$action_name();
+                $controller = new $controller_name($queryParams);
+                $controller->$action_name();
             }
         }
     }
