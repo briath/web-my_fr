@@ -2,14 +2,15 @@
 
 namespace my_fr\core;
 
+
 class Router
 {
+    private $_controller_ways = array();
     private $_uri = array();
     private $_method = array();
 
     public function __construct()
     {
-
     }
 
     public function add($uri, $method = null){
@@ -20,23 +21,38 @@ class Router
         }
     }
 
+    public function addController_ways($name, $ways){
+        $this->_controller_ways[$name] = $ways;
+    }
+
     public function submit(){
-        echo '<pre>';
+        //echo '<pre>';
         //print_r($this->_uri);
         //print_r($this->_method);
 
+
+        //controller
         $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'], '/')) : [];
-        print_r($url);
-        $uriGetParam = (isset($url[0]) && $url[0] != '') ? '/' . $url[0] : '/';
+        $controller_name = ((isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : '/Main');
         array_shift($url);
-        foreach ($this->_uri as $key => $value) {
-            if (preg_match("#^$value$#", $uriGetParam)) {
-                $controller_name = $this->_method[$key][0];
-                $action_name = $this->_method[$key][1];
-                $queryParams = $url;
-                $controller = new $controller_name($queryParams);
-                $controller->$action_name();
-            }
+
+        //action
+        $action_name = (isset($url[0]) && $url[0] != '') ? $url[0] . 'Action' : 'indexAction';
+        array_shift($url);
+        //echo $controller_name . '<br/>';
+        //echo $action_name . '<br/>';
+        //print_r($url);
+
+        //params
+        $queryParams = $url;
+
+        //echo $this->_uri[$controller_name];;
+        $controller = new $this->_controller_ways[$controller_name];
+
+        if(method_exists($controller, $action_name)){
+            call_user_func_array([$controller, $action_name], $queryParams);
+        } else {
+            die('This method doesn\'t exist (\"' . $action_name . '\"');
         }
     }
 

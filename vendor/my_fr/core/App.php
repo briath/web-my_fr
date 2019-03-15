@@ -13,6 +13,12 @@ use app\controller\UserController;
 class App
 {
 
+    public static $controller_ways = [
+        'Main'       => MainController::class,
+        'User'       => UserController::class,
+        'Article'    => ArticleController::class,
+    ];
+
     public static $ways = [
         ''                  => [MainController::class, 'indexAction'],
         '/'                 => [MainController::class, 'indexAction'],
@@ -41,6 +47,9 @@ class App
         $router->add('/index.php', [MainController::class, 'indexAction']);
         foreach (self::$ways as $key => $value){
             $router->add($key, $value);
+        }
+        foreach (self::$controller_ways as $key => $value){
+            $router->addController_ways($key, $value);
         }
 
         $router->submit();

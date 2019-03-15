@@ -9,7 +9,7 @@ class View
      * object View
      */
     protected static $_view;
-    protected $_head, $_body, $_siteTitle, $_layout = 'layout', $_outputBuffer;
+    protected $_head, $_body, $_siteTitle = 'ProPUBG', $_layout = 'layout', $_outputBuffer;
 
     public $view, $title;
 
@@ -30,7 +30,8 @@ class View
         $this->title = 'ProPUBG';
         if(file_exists($file)){
             $this->view = $file . '';
-            include $viewPath . 'layouts/' . self::$_layout . '.php';
+            $this->_render();
+            include $viewPath . 'layouts/' . $this->_layout . '.php';
         } else {
             die('the view \"' . $viewName . '\" does not exist.' . ' Dir \"' . $viewPath . '\"' . '<br/>' . __DIR__);
         }
@@ -39,7 +40,7 @@ class View
     private function _render(){
         $arr = explode('/', __DIR__);
         array_splice($arr, 4);
-        $filePath = implode('/', $arr) . '/app/view/user/';
+        $filePath = implode('/', $arr) . '/app/view/main/';
         if(my_fr::$isGuest){
             if(file_exists($filePath)) {
                 include $filePath . 'index.php';
@@ -67,9 +68,9 @@ class View
 
     public function end(){
         if($this->_outputBuffer == 'head'){
-            $this->_head = ob_end_clean();
-        } elseif ($this->_body == 'body'){
-            $this->_body = ob_end_clean();
+            $this->_head = ob_get_clean();
+        } elseif ($this->_outputBuffer == 'body'){
+            $this->_body = ob_get_clean();
         } else {
             die('View function end');
         }

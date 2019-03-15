@@ -13,7 +13,7 @@ use my_fr\core\Controller;
 
 class MainController extends Controller
 {
-    public function indexAction(){
+    public function indexAction($params = null){
         $this->render('user/View.Registration');
     }
 

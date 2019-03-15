@@ -12,10 +12,8 @@ class Controller
 
     protected $_params = array();
 
-    public function __construct($params = null)
+    public function __construct()
     {
-        $this->_params = $params;
-        //print_r($this->_params);
     }
 
     public function render($viewName, $attributes = null){
