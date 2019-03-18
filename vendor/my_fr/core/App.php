@@ -1,13 +1,15 @@
 <?php
 
 
-
 namespace my_fr\core;
+
+
 
 use app\controller\ArticleController;
 use my_fr\core\web\Session;
 use app\controller\MainController;
 use app\controller\UserController;
+
 
 
 class App
@@ -34,7 +36,6 @@ class App
     ];
 
     static public function start(){
-
         try{
             Session::start();
 

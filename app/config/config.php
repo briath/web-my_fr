@@ -1,18 +1,24 @@
 <?php
 
 define('DEFAULT_LAYOUT', 'layout');
+define('SITE_TITLE', 'ProPUBG');
 
-return $config = [
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '01151522223m');
+define('DB_NAME', 'ProPUBG_databases');
 
-    'site_name'     => 'ProPUBG',
-    'def_router'    => 'main',
-    'def_layout'    => 'layout',
-    'def_lang'      => 'en',
-
-    'db' => [
-        'host'  => 'localhost',
-        'user'  => 'root',
-        'pass'  => '01151522223',
-        'name'  => 'ProPUBG',
-    ],
-];
+//return $config = [
+//
+//    'site_name'     => 'ProPUBG',
+//    'def_router'    => 'main',
+//    'def_layout'    => 'layout',
+//    'def_lang'      => 'en',
+//
+//    'db' => [
+//        'host'  => 'localhost',
+//        'user'  => 'root',
+//        'pass'  => '01151522223',
+//        'name'  => 'ProPUBG_databases',
+//    ],
+//];

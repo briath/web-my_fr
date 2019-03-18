@@ -9,7 +9,7 @@ class View
      * object View
      */
     protected static $_view;
-    protected $_head, $_body, $_siteTitle = 'ProPUBG', $_layout = 'layout', $_outputBuffer;
+    protected $_head, $_body, $_siteTitle = SITE_TITLE, $_layout = DEFAULT_LAYOUT, $_outputBuffer;
 
     public $view, $title;
 
