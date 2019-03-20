@@ -6,6 +6,7 @@ namespace my_fr\core;
 
 
 use app\controller\ArticleController;
+use app\controller\RegisterController;
 use my_fr\core\web\Session;
 use app\controller\MainController;
 use app\controller\UserController;
@@ -19,6 +20,7 @@ class App
         'Main'       => MainController::class,
         'User'       => UserController::class,
         'Article'    => ArticleController::class,
+        'Register'   => RegisterController::class,
     ];
 
     public static $ways = [

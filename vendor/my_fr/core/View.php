@@ -30,7 +30,8 @@ class View
         $this->title = 'ProPUBG';
         if(file_exists($file)){
             $this->view = $file . '';
-            $this->_render();
+            include $this->view;
+            //$this->_render();
             include $viewPath . 'layouts/' . $this->_layout . '.php';
         } else {
             die('the view \"' . $viewName . '\" does not exist.' . ' Dir \"' . $viewPath . '\"' . '<br/>' . __DIR__);

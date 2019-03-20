@@ -8,6 +8,10 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '01151522223m');
 define('DB_NAME', 'ProPUBG_databases');
 
+define('CURRENT_USER_SESSION_NAME', '');
+define('REMEMBER_ME_COOKIE_NAME', '');
+define('REMEMBER_ME_COOKIE_EXPIRY', 1209600); //14 days
+
 //return $config = [
 //
 //    'site_name'     => 'ProPUBG',

@@ -20,13 +20,6 @@ use my_fr\core\DB;
 class MainController extends Controller
 {
     public function indexAction($params = null){
-        $db = DB::getInstance();
-        echo '<pre>';
-        print_r($db->findFirst('users', [
-            'conditions' => "user_password = ?",
-            'bind' => ['0110']
-        ]));
-
         $this->render('user/View.Registration');
     }
 
