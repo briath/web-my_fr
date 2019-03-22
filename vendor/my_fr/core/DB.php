@@ -89,7 +89,6 @@ class DB
             $limit = ' LIMIT ' . $params['limit'];
         }
         $sql = "SELECT * FROM {$table}{$conditionsString}{$order}{$limit}";
-        echo $sql;
         if($this->query($sql, $bind)){
             if(!count($this->_result)) return false;
             return true;
@@ -124,7 +123,6 @@ class DB
         $fieldsString = rtrim($fieldsString, ",");
         $valueString = rtrim($valueString, ",");
         $sql = "INSERT INTO {$table} ({$fieldsString}) VALUES ({$valueString})";
-        echo $sql;
         if(!$this->query($sql, $values)->error()){
             return true;
         }

@@ -19,14 +19,14 @@ class Model
         $this->_db = DB::getInstance();
         $this->_table = $table;
         $this->_setTableColumns();
-        $this->_modelName = str_replace( ' ', '', ucwords(str_replace('_', ' ', $this->_table)));
+        $this->_modelName = 'app\model\\'.str_replace( ' ', '', ucwords(str_replace('_', ' ', $this->_table)));
     }
 
     protected function _setTableColumns(){
         $columns = $this->get_columns();
         foreach ($columns as $column){
             $this->_columnNames[] = $column->Field;
-            $this->{$columnName} = null;
+            $this->{$column->Field} = null;
         }
     }
 

@@ -28,4 +28,10 @@ class Controller
 
         return  implode('/', $arr) . '/app/view/';
     }
+
+    protected function load_model($model){
+        if(class_exists($model)){
+            $this->{$model.'Model'} = new $model(strtolower($model));
+        }
+    }
 }

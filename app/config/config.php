@@ -8,8 +8,8 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', '01151522223m');
 define('DB_NAME', 'ProPUBG_databases');
 
-define('CURRENT_USER_SESSION_NAME', '');
-define('REMEMBER_ME_COOKIE_NAME', '');
+define('CURRENT_USER_SESSION_NAME', 'atsdhaw%#qatas346TAqGT');
+define('REMEMBER_ME_COOKIE_NAME', 'szdbh523#tyHB$tgQWAGVBy3tGTsdfghy5e');
 define('REMEMBER_ME_COOKIE_EXPIRY', 1209600); //14 days
 
 //return $config = [
