@@ -20,7 +20,7 @@ use my_fr\core\DB;
 class MainController extends Controller
 {
     public function indexAction($params = null){
-        $this->render('user/View.Registration');
+        $this->render('main/index');
     }
 
 }

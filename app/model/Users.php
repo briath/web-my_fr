@@ -38,7 +38,7 @@ class Users extends Model
     }
 
     public function login($rememberMe = false){
-        Session::set($this->_sessionName, $this->id);
+        Session::set(array($this->_sessionName, $this->id));
         if($rememberMe){
             $hash = md5(uniqid() + rand(0, 100));
             $user_agent = Session::uagent_no_version();
