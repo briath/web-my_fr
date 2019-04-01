@@ -5,38 +5,85 @@
 
 
 <?php $this->start('body'); ?>
-<header id="" class="card-header" role="banner">
+<?php include 'header.php' ?>
+<main class="mt-5" id="main">
     <div class="container">
-        <h1 class="text-center red">Welcome to the league of Maxim</h1>
-    </div>
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/web/index.php/register/login">Pro
-                <img src="../../../web/docs/pictures/ProPUBG.png" width="35" height="35" class="d-inline-block align-top" alt="">
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/web/index.php/main/index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/web/index.php/main/index">Guides</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/web/index.php/main/index">Educational videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/web/index.php/main/index">Graphs damage</a>
-                    </li>
-                </ul>
+        <section id="home" class="text-center">
+            <h2 class="md-5 font-weight-bold">HOME</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image3.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image5.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;">
+                            <img src="../../../web/docs/image/image6.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Название карточки</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
+        </section>
     </div>
-</header>
+</main>
+<div class="footer">
+<footer class="card-footer">
+    <div class="container">
+        <span class="text-muted">qqqqq</span>
+    </div>
+</footer>
+</div>
 <?php $this->end(); ?>

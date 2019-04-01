@@ -32,8 +32,8 @@ class Router
 
 
         //controller
-        $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'], '/')) : [];
-        $controller_name = ((isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : '/Main');
+        $url = isset($_SERVER['REQUEST_URI']) ? explode('/', ltrim($_SERVER['REQUEST_URI'], '/')) : [];
+        $controller_name = ((isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : 'Main');
         array_shift($url);
 
         //action
@@ -47,6 +47,7 @@ class Router
         $queryParams = $url;
 
         //echo $this->_uri[$controller_name];;
+
         $controller = new $this->_controller_ways[$controller_name];
 
         if(method_exists($controller, $action_name)){
@@ -57,6 +58,7 @@ class Router
     }
 
     public static function redirect($location){
+        $location = 'http://www.site1.com/'.$location;
         if(!headers_sent()){
             header('Location: '.$location);
             exit();

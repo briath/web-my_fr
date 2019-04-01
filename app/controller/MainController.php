@@ -23,4 +23,15 @@ class MainController extends Controller
         $this->render('main/index');
     }
 
+    public function guidesAction($params = null){
+        $this->render('main/guides');
+    }
+
+    public function videosAction($params = null){
+        $this->render('main/videos');
+    }
+
+    public function graphsAction($params = null){
+        $this->render('main/graphs');
+    }
 }

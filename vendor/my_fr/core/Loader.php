@@ -10,13 +10,12 @@ class Loader
         $prefix = array_shift($arr);
 
         if($prefix == 'app'){
-            $prefix_file =  realpath(__DIR__ . '/../../../app') . '/';
+            $prefix_file =  'app/';
         } elseif ($prefix == 'my_fr') {
-            $prefix_file = '../vendor/my_fr/';
+            $prefix_file = 'vendor/my_fr/';
         }
 
         $file = $prefix_file . implode('/', $arr) . '.php';
-
 
         if(is_file($file)){
             include $file;

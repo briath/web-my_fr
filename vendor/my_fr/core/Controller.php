@@ -11,13 +11,15 @@ class Controller
 {
 
     protected $_params = array();
+    public $view;
 
     public function __construct()
     {
+        $this->view = View::getView();
     }
 
     public function render($viewName, $attributes = null){
-        (new View())->getView(isset($this->layout) ? $this->layout : null)->render($this->getClassFromPath(), $viewName, $attributes);
+        View::getView()->render($this->getClassFromPath(), $viewName, $attributes);
     }
 
 

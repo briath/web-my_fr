@@ -11,6 +11,8 @@
 namespace my_fr\core;
 
 
+use PDO;
+
 class DB
 {
     private static $_instance = null;

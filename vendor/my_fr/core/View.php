@@ -11,7 +11,7 @@ class View
     protected static $_view;
     protected $_head, $_body, $_siteTitle = SITE_TITLE, $_layout = DEFAULT_LAYOUT, $_outputBuffer;
 
-    public $view, $title;
+    public $view, $title, $displayErrors;
 
 
 
@@ -31,7 +31,6 @@ class View
         if(file_exists($file)){
             $this->view = $file . '';
             include $this->view;
-            //$this->_render();
             include $viewPath . 'layouts/' . $this->_layout . '.php';
         } else {
             die('the view \"' . $viewName . '\" does not exist.' . ' Dir \"' . $viewPath . '\"' . '<br/>' . __DIR__);
