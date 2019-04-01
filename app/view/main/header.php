@@ -25,10 +25,7 @@
                 </ul>
             </div>
 
-            <form class="form-inline my-2 my-lg-0">
-                <a class="btn btn-outline-success my-2 my-sm-0 rounded-pill btn-sm mx-md-1" href="/register/login">LOG IN</a>
-                <a class="btn btn-outline-success my-2 my-sm-0 rounded-pill btn-sm mx-md-1" href="/register/register">SIGN UP</a>
-            </form>
+            <?php include 'userButtons.php'; ?>
 
             <form class="form-inline my-2 my-lg-0">
 
