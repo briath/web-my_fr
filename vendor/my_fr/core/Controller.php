@@ -24,11 +24,7 @@ class Controller
 
 
     public function getClassFromPath(){
-        $arr = explode('/', __DIR__);
-
-        array_splice($arr, 4);
-
-        return  implode('/', $arr) . '/app/view/';
+        return  DROOT . '/app/view/';
     }
 
     protected function load_model($model){
