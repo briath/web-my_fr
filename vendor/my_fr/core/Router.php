@@ -58,7 +58,7 @@ class Router
     }
 
     public static function redirect($location){
-        $location = 'http://www.site1.com/'.$location;
+        $location = 'http://' . $_SERVER['SERVER_NAME'] . '/' . $location;
         if(!headers_sent()){
             header('Location: '.$location);
             exit();
