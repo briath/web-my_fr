@@ -48,7 +48,7 @@ class App
 
 
         if(!Session::exists(CURRENT_USER_SESSION_NAME) && Cookie::exists(REMEMBER_ME_COOKIE_NAME)) {
-            //Users::loginUserFromCookie();
+            Users::loginUserFromCookie();
         }
 
         $router = new Router();

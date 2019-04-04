@@ -1,4 +1,4 @@
-<header id="" class="card-header" role="banner">
+<header id="" class="card-header mb-5" role="banner">
     <div class="container">
         <h1 class="text-center red">Welcome to the league of Maxim</h1>
     </div>

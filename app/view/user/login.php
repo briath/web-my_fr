@@ -1,6 +1,6 @@
 <?php $this->start('head'); ?>
 <?php $this->end(); ?>
-<?php $this->start('head'); ?>
+<?php $this->start('body'); ?>
 <div class="col-md-6 offset-md-3 card card-body bg-light">
     <form class="form" action="" method="post">
         <div class="bg-danger"><?=$this->displayErrors ?></div>

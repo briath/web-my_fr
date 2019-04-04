@@ -5,7 +5,7 @@
 
 
 <?php $this->start('body'); ?>
-<?php include 'header.php'; ?>
+
 <main class="mt-5" id="main">
     <div class="container">
         <section id="home" class="text-center">

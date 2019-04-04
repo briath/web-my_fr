@@ -5,5 +5,5 @@
 
 
 <?php $this->start('body'); ?>
-<?php include 'header.php'; ?>
+
 <?php $this->end(); ?>
