@@ -5,7 +5,7 @@ define('SITE_TITLE', 'ProPUBG');
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASSWORD', '01151522223m');
+define('DB_PASSWORD', 'A13f27BcE5$');
 define('DB_NAME', 'ProPUBG_databases');
 
 define('CURRENT_USER_SESSION_NAME', 'atsdhaw%#qatas346TAqGT');
