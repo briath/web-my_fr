@@ -9,12 +9,12 @@
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/main/index">Home</a>
+                <ul class="navbar-nav" id="myTab">
+                    <li class="nav-item">
+                        <a class="nav-link" id="Home" href="/main/index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/main/guides">Guides</a>
+                        <a class="nav-link" href="/contents/guides">Guides</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/main/videos">Educational videos</a>

@@ -6,6 +6,7 @@ namespace my_fr\core;
 
 
 use app\controller\ArticleController;
+use app\controller\ContentsController;
 use app\controller\RegisterController;
 use app\model\Users;
 use my_fr\core\web\Cookie;
@@ -23,6 +24,7 @@ class App
         'User'       => UserController::class,
         'Article'    => ArticleController::class,
         'Register'   => RegisterController::class,
+        'Contents'   => ContentsController::class,
     ];
 
     public static $ways = [

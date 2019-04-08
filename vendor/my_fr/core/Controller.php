@@ -32,4 +32,12 @@ class Controller
             $this->{$model.'Model'} = new $model(strtolower($model));
         }
     }
+
+    protected function posted_values($post){
+        $clean_ary = [];
+        foreach ($post as $key => $value){
+            $clean_ary[$key] = htmlentities($value, ENT_QUOTES, 'UTF-8');
+        }
+        return $clean_ary;
+    }
 }

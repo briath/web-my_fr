@@ -41,7 +41,7 @@ class Router
         array_shift($url);
         //echo $controller_name . '<br/>';
         //echo $action_name . '<br/>';
-        //print_r($url);
+
 
         //params
         $queryParams = $url;

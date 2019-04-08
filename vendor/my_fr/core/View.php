@@ -9,9 +9,9 @@ class View
      * object View
      */
     protected static $_view;
-    protected $_head, $_body, $_siteTitle = SITE_TITLE, $_layout = DEFAULT_LAYOUT, $_outputBuffer;
+    protected $_head, $_body, $_siteTitle = SITE_TITLE, $_layout = DEFAULT_LAYOUT, $_outputBuffer, $_attr;
 
-    public $view, $title, $displayErrors;
+    public $view, $title, $displayErrors, $code;
 
 
 
@@ -26,6 +26,7 @@ class View
 
 
     public function render($viewPath, $viewName, $attr = null){
+        $this->_attr = $attr;
         $file = $viewPath . $viewName . '.php';
         $this->title = 'ProPUBG';
         if(file_exists($file)){

@@ -90,8 +90,10 @@ class Validate
     public function displayName($display){
         if($display === 'User_login'){
             return 'Username';
-        } elseif ($display === 'User_password'){
+        } elseif ($display === 'User_password') {
             return 'Password';
+        } elseif ($display === 'Name_content'){
+            return 'Name';
         } else {
             return $display;
         }

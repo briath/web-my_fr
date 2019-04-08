@@ -24,6 +24,11 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <script>
+        $("#myTab a").on("click", function () {
+            $("#Home").
+        })
+    </script>
     <?=$this->content('body') ?>
 
 
