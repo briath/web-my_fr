@@ -36,12 +36,12 @@ class Router
         $controller_name = ((isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : 'Main');
         array_shift($url);
 
+
         //action
         $action_name = (isset($url[0]) && $url[0] != '') ? $url[0] . 'Action' : 'indexAction';
         array_shift($url);
         //echo $controller_name . '<br/>';
         //echo $action_name . '<br/>';
-
 
         //params
         $queryParams = $url;
@@ -51,7 +51,7 @@ class Router
         $controller = new $this->_controller_ways[$controller_name];
 
         if(method_exists($controller, $action_name)){
-            call_user_func_array([$controller, $action_name], $queryParams);
+            call_user_func_array([$controller, $action_name], array($queryParams));
         } else {
             die('This method doesn\'t exist (\"' . $action_name . '\"');
         }

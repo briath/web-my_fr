@@ -1,6 +1,5 @@
 <?php
 
-
 define('ROOT', __DIR__ . 'index.php/');
 define('SNAME', $_SERVER['SERVER_NAME']);
 define('DROOT', $_SERVER['DOCUMENT_ROOT']);

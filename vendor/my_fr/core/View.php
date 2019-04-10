@@ -11,7 +11,8 @@ class View
     protected static $_view;
     protected $_head, $_body, $_siteTitle = SITE_TITLE, $_layout = DEFAULT_LAYOUT, $_outputBuffer, $_attr;
 
-    public $view, $title, $displayErrors, $code;
+    public $view, $title, $displayErrors, $codeContent;
+    public $previousPage, $nextPage, $activePage, $countPage;
 
 
 
@@ -88,5 +89,12 @@ class View
 
     public function setLayout($path){
         $this->_layout = $path;
+    }
+
+    public function code($params = null){
+        if(!empty($params)){
+
+        }
+
     }
 }
