@@ -63,6 +63,12 @@ class ContentsController extends Controller
                     'unique'        => 'contents',
                     'max'           => 150,
                 ],
+
+                'url'=>[
+                    'display'       => 'Add ' . $params[0],
+                    'required'      => true,
+                    'valid_url'     => true,
+                ],
             ]);
             if($valadation->passed()) {
                 $content = new Contents($params[0], 1);

@@ -77,6 +77,12 @@ class Validate
                                 $this->addError(["{$display} must be a valid email address.", $item]);
                             }
                             break;
+
+                        case 'valid_url':
+                            if(!filter_var($value, FILTER_VALIDATE_URL)){
+                                $this->addError(["{$display} must be a valid url.", $item]);
+                            }
+                            break;
                     }
                 }
             }
