@@ -17,10 +17,10 @@
                         <a class="nav-link" href="/contents/guides">Guides</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/main/videos">Educational videos</a>
+                        <a class="nav-link" href="/contents/videos">Educational videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/main/graphs">Graphs damage</a>
+                        <a class="nav-link" href="/contents/graphs">Graphs damage</a>
                     </li>
                 </ul>
             </div>

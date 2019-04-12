@@ -10,7 +10,7 @@
         <h2 class="md-5 font-weight-bold text-center">Guides</h2>
         <?= $this->codeContent ?>
 
-        <a class="btn btn-outline-success my-2 my-sm-0 rounded-pill btn-lg mx-md-1" href="/contents/add/guid">add content</a>
+        <a class="btn btn-outline-success my-2 my-sm-0 rounded-pill btn-lg mx-md-1" href="/contents/add/guides">Add content</a>
     </div>
 </main>
 <?php $this->end(); ?>
