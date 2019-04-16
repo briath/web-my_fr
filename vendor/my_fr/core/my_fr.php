@@ -11,5 +11,5 @@ namespace my_fr\core;
 
 class my_fr
 {
-    public static $isGuest = true;
+    public static $lvl = 0;
 }

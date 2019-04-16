@@ -27,20 +27,6 @@ class App
         'Contents'   => ContentsController::class,
     ];
 
-    public static $ways = [
-        ''                  => [MainController::class, 'indexAction'],
-        '/'                 => [MainController::class, 'indexAction'],
-        '/error'            => [MainController::class, 'errorAction'],
-        '/guides'           => [MainController::class, 'guideAction'],
-        '/videos'           => [MainController::class, 'videoAction'],
-        '/graphs'           => [MainController::class, 'graphAction'],
-
-        '/registration'     => [UserController::class, 'registrationAction'],
-        '/login'            => [UserController::class, 'loginAction'],
-
-        '/articles'         => [ArticleController::class, 'show_articleAction'],
-    ];
-
     static public function start(){
         try{
             Session::start();
@@ -55,10 +41,7 @@ class App
 
         $router = new Router();
 
-        $router->add('/index.php', [MainController::class, 'indexAction']);
-        foreach (self::$ways as $key => $value){
-            $router->add($key, $value);
-        }
+
         foreach (self::$controller_ways as $key => $value){
             $router->addController_ways($key, $value);
         }

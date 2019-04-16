@@ -4,6 +4,7 @@ namespace app\model;
 
 
 use my_fr\core\Model;
+use my_fr\core\my_fr;
 use my_fr\core\web\Cookie;
 use my_fr\core\web\Session;
 
@@ -47,6 +48,7 @@ class Users extends Model
 
     public function login($rememberMe = false){
         Session::set($this->_sessionName, $this->id);
+        $_SESSION['lvl'] = $this->lvl;
         if($rememberMe){
             $hash = md5(uniqid() + rand(0, 100));
             $user_agent = Session::uagent_no_version();
@@ -77,6 +79,7 @@ class Users extends Model
         if(Cookie::exists(REMEMBER_ME_COOKIE_NAME)){
             Cookie::delete(REMEMBER_ME_COOKIE_NAME, REMEMBER_ME_COOKIE_EXPIRY);
         }
+        $_SESSION['lvl'] = 0;
         self::$currentLoggedInUser = null;
         return true;
     }
@@ -85,6 +88,9 @@ class Users extends Model
     {
         $this->assign($params);
         $this->user_password = password_hash($this->user_password, PASSWORD_DEFAULT);
+        $this->lvl = 1;
         $this->save();
+        $u = $this->_db->findFirst('users', ['conditions' => 'user_login = ?', 'bind' => [$this->user_login]]);
+        $this->id = $u->id;
     }
 }

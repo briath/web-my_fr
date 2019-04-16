@@ -16,10 +16,12 @@ namespace app\controller;
 use app\view\ViewRegistration;
 use my_fr\core\Controller;
 use my_fr\core\DB;
+use my_fr\core\my_fr;
 
 class MainController extends Controller
 {
     public function indexAction($params = null){
+        echo my_fr::$lvl;
         $this->render('main/index');
     }
 

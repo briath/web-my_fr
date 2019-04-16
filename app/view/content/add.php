@@ -17,6 +17,10 @@
             <textarea name="description" id="description" class="form-control" rows="5"></textarea>
         </div>
         <div class="form-group">
+            <label for="">Type content</label>
+            <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="form-group">
             <label for="url">Add <?= $this->_attr[0] ?></label>
             <input type="text" name="url" id="url" class="form-control" placeholder="url">
         </div>

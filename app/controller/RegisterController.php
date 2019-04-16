@@ -52,6 +52,7 @@ class RegisterController extends Controller
         if(Users::currentLoggedInUser()){
             Users::currentLoggedInUser()->logout();
         }
+
         Router::redirect('');
     }
 

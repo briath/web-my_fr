@@ -16,9 +16,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="../../../web/docs/image/image1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
+                                <h5 class="card-title">Guides</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                                <a href="/contents/guides/1" class="btn btn-primary">Show Guides</a>
                             </div>
                         </div>
                     </div>
@@ -26,9 +26,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="../../../web/docs/image/image2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
+                                <h5 class="card-title">Educational videos</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                                <a href="/contents/videos/1" class="btn btn-primary">Show Videos</a>
                             </div>
                         </div>
                     </div>
@@ -36,9 +36,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="../../../web/docs/image/image3.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
+                                <h5 class="card-title">Graphs</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                                <a href="/contents/graphs/1" class="btn btn-primary">Show Graphs</a>
                             </div>
                         </div>
                     </div>
@@ -46,31 +46,11 @@
                 <div class="row">
                     <div class="col">
                         <div class="card" style="width: 18rem;">
-                            <img src="../../../web/docs/image/image4.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card" style="width: 18rem;">
                             <img src="../../../web/docs/image/image5.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
+                                <h5 class="card-title">Items</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card" style="width: 18rem;">
-                            <img src="../../../web/docs/image/image6.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Название карточки</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Переход куда-нибудь</a>
+                                <a href="#" class="btn btn-primary">Show Items</a>
                             </div>
                         </div>
                     </div>

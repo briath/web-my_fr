@@ -44,6 +44,16 @@ class ContentsController extends Controller
         $this->render('main/videos');
     }
 
+    public function graphsAction($params = 1){
+        $this->number_page = (is_array($params) and !empty($params)) ? $params[0] : 1;
+        $content = new Contents('graphs', $this->number_page);
+
+
+        $this->view->codeContent = $content->view_content();
+        $this->view->codeContent .= $content->pagination();
+        $this->render('main/graphs');
+    }
+
     public function showAction($params){
         $id = substr($params[1], 3);
         $content = new Contents($params[0],1, $id);
